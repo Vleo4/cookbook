@@ -1,0 +1,122 @@
+.app__main {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-left: 60px;
+  min-height: 100vh;
+}
+
+.app__main span {
+  display: flex;
+  width: 100%;
+  max-width: 1395px;
+  height: 1px;
+  background: #ffc700;
+  align-self: flex-end;
+  margin-top: 50px;
+  margin-bottom: 30px;
+}
+
+.app__main-searchbar {
+  display: flex;
+  width: 100%;
+}
+
+.app__main-content {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+}
+
+.app__main h1 {
+  display: flex;
+  width: 100%;
+  font-family: var(--font-swap);
+  font-weight: 400;
+  font-size: 64px;
+  line-height: 85px;
+  color: #f9f9f9;
+  margin-right: 60px;
+}
+
+.app__main-content_text p {
+  font-family: var(--font-swap);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 21px;
+  color: #ffc700;
+}
+
+.app__main-content_text p:first-of-type {
+  margin-top: 70px;
+}
+
+.app__main-content_text-links_item-arrow_text:hover {
+  color: var(--color-golden);
+}
+
+.app__main-content_text-links_item-arrow {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: flex-start;
+  cursor: pointer;
+  margin-bottom: 50px;
+}
+
+.app__main-content_text-links_item-arrow img {
+  margin-left: 10px;
+  align-self: center;
+}
+
+.app__main-content_text-links_item-arrow_text {
+  font-family: var(--font-swap);
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 43px;
+  color: #f9f9f9;
+}
+
+.app__content-img img {
+  width: 100%;
+  height: auto;
+}
+
+@media screen and (max-width: 1220px) {
+  .app__main-content {
+    flex-direction: column-reverse;
+  }
+  .app__content-img {
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
+  .app__main h1 {
+    font-size: 46px;
+    line-height: 65px;
+    padding-right: 20px;
+  }
+  .app__main-content_text-links_item-arrow img {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 890px) {
+  .app__main {
+    margin-left: 1rem;
+  }
+}
+
+@media screen and (max-width: 630px) {
+  .app__main h1 {
+    font-size: 32px;
+    line-height: 45px;
+  }
+  .app__main-content_text-links_item-arrow_text {
+    font-size: 24px;
+    line-height: 32px;
+  }
+  .app__main-content_text p {
+    font-size: 12px;
+    line-height: 16px;
+  }
+}

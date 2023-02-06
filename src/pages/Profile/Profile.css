@@ -1,0 +1,77 @@
+.app__profile {
+  display: flex;
+  justify-content: flex-start;
+  width: 100%;
+  flex-direction: column;
+  padding-top: 100px;
+  padding-left: 140px;
+  padding-right: 120px;
+  min-height: 100%;
+}
+
+.app__profile-name {
+  margin-top: 40px;
+}
+
+.app__profile-name,
+.app__profile-email {
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+  margin-bottom: 15px;
+}
+
+.app__profile-name h3,
+.app__profile-meals h3,
+.app__profile-email h3 {
+  font-family: var(--font-swap);
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 32px;
+  color: #f3f3f3;
+}
+
+.app__profile-name h2,
+.app__profile-email h2 {
+  font-family: var(--font-swap);
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 32px;
+  color: #ffc700;
+  margin-left: 10px;
+}
+
+.app__profile-meals {
+  display: grid;
+}
+
+.app__profile-meals_cards {
+  margin-top: 10px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+@media screen and (max-width: 1276px) {
+  .app__profile {
+    padding-left: 40px;
+    padding-right: 20px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .app__profile {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  .app__profile-name h3,
+  .app__profile-meals h3,
+  .app__profile-email h3 {
+    font-size: 18px;
+    line-height: 26px;
+  }
+  .app__profile-name h2,
+.app__profile-email h2 {
+  font-size: 20px;
+  line-height: 28px;
+}
+}

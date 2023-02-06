@@ -1,0 +1,44 @@
+.app__categoriesCard {
+    display: flex;
+    flex-direction: column;
+    margin-right: 20px;
+    margin-top: 30px;
+  }
+  
+  .app__categoriesCard img {
+    width: 388px;
+    height: 228px;
+    filter: brightness(0.5);
+  }
+  
+  .app__categoriesCard p {
+    font-family: var(--font-pattaya);
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 50px;
+    color: #f9f9f9;
+    max-width: 388px;
+    text-align: center;
+  }
+  
+  @media screen and (max-width: 1220px) {
+    .app__categoriesCard {
+      margin-right: 1rem;
+    }
+    .app__categoriesCard img {
+      width: 288px;
+      height: 168px;
+    }
+    .app__categoriesCard p {
+      font-size: 28px;
+      line-height: 42px;
+      max-width: 288px;
+    }
+  }
+  
+  @media screen and (max-width: 420px) {
+    .app__categoriesCard img {
+      width: 228px;
+      height: 138px;
+    }
+  }

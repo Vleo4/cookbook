@@ -1,0 +1,57 @@
+.app__meals {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding-top: 100px;
+  padding-left: 140px;
+  padding-right: 120px;
+}
+
+.app__meals-sub {
+  display: flex;
+  flex-direction: row;
+}
+
+.app__meals-sub button {
+  display: flex;
+  border: none;
+  background: transparent;
+  align-items: center;
+  gap: 2px;
+  cursor: pointer;
+
+  font-family: var(--font-swap);
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 32px;
+  color: #f9f9f9;
+}
+
+.app__meals-sub button:hover {
+  color: var(--color-golden);
+}
+
+.app__meals-cards {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+@media screen and (max-width: 1480px) {
+  .app__meals {
+    padding-left: 40px;
+    padding-right: 20px;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .app__meals {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  .app__meals-sub {
+    flex-direction: column;
+  }
+  .app__meals-sub button {
+    margin-top: 10px;
+  }
+}

@@ -1,0 +1,30 @@
+.app__profileCard {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin-right: 32px;
+  margin-bottom: 32px;
+}
+
+.app__profileCard p {
+  font-family: var(--font-pattaya);
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 33px;
+  color: #ffc700;
+  max-width: 300px;
+  text-align: center;
+}
+
+.app__profileCard img {
+  display: flex;
+  width: 300px;
+  height: 200px;
+}
+
+@media screen and (max-width: 450px) {
+  .app__profileCard img {
+    width: 250px;
+    height: 150px;
+  }
+}
