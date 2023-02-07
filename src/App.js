@@ -15,6 +15,11 @@ import Meals from "./pages/Meals/Meals";
 import Categories from "./pages/Categories/Categories";
 import CreateMeal from "./pages/CreateMeal/CreateMeal";
 import SearchMeal from "./pages/SearchMeal/SearchMeal";
+import Meal from "./pages/Meals/Meal/Meal";
+import RandomMeal from "./pages/RandomMeal/RandomMeal";
+import AllIngredients from "./pages/AllIngredients/AllIngredients";
+import Ingredient from "./pages/AllIngredients/Ingredient/Ingredient";
+import IngredientCategories from "./pages/IngredientCategories/IngredientCategories";
 
 const App = () => {
   return (
@@ -30,6 +35,11 @@ const App = () => {
           <Route path="/meal-categories" exact element={<Categories />} />
           <Route path="/add-recipe" exact element={<CreateMeal />} />
           <Route path="/search-ingredients" exact element={<SearchMeal />} />
+          <Route path="/meals/meal/:id" exact element={<Meal/>} />
+          <Route path="/random-meal" exact element={<RandomMeal/>} />
+          <Route path="/all-ingredients" exact element={<AllIngredients/>} />
+          <Route path="/all-ingredients/ingredient/:id" exact element={<Ingredient/>} />
+          <Route path="/ingredients-categories" exact element={<IngredientCategories/>} />
           <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
       </Router>

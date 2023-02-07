@@ -32,9 +32,6 @@ const Sidebar = () => {
           <Link to="/random-meal" className="app__sidebar-content_links-item">
             Випадкова страва
           </Link>
-          <Link to="/users-meals" className="app__sidebar-content_links-item">
-            Страви
-          </Link>
           <Link to="/add-recipe" className="app__sidebar-content_links-item">
             Додати рецепт
           </Link>
@@ -105,12 +102,6 @@ const Sidebar = () => {
                 className="app__sidebar-content_links-item"
               >
                 Випадкова страва
-              </Link>
-              <Link
-                to="/users-meals"
-                className="app__sidebar-content_links-item"
-              >
-                Страви
               </Link>
               <Link
                 to="/add-recipe"

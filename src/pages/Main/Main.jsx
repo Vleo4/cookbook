@@ -25,7 +25,7 @@ const Main = () => {
           <p>Новинка!</p>
           <div className="app__main-content_text-links_item-arrow">
             <Link
-              to="/create-recipe"
+              to="/meals"
               className="app__main-content_text-links_item-arrow_text"
             >
               Переглянути страви

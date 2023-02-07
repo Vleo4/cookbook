@@ -1,0 +1,57 @@
+.app__ingredient {
+  padding-top: 100px;
+  padding-left: 140px;
+  padding-right: 120px;
+  min-height: 100vh;
+  width: 100%;
+}
+
+.app__ingredient img {
+    max-width: 588px;
+    max-height: 428px;
+  border-bottom: 2px solid rgba(255, 199, 0, 0.6);
+  border-radius: 25px;
+  margin-bottom: 1rem;
+}
+
+.app__ingredient p {
+  font-family: var(--font-swap);
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 30px;
+  color: #f3f3f3;
+  margin-bottom: 20px;
+}
+
+.app__ingredient h3 {
+  font-family: var(--font-pattaya);
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 37px;
+  color: #ffc700;
+}
+
+@media screen and (max-width: 1276px) {
+  .app__ingredient {
+    padding-left: 40px;
+    padding-right: 20px;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .app__ingredient img {
+    max-width: 328px;
+    max-height: 228px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .app__ingredient {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  .app__ingredient img {
+    max-width: 288px;
+    max-height: 158px;
+  }
+}

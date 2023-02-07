@@ -2,11 +2,13 @@ import React from "react";
 import "./MealCard.css";
 import images from "../../constants/images";
 
-const MealCard = () => {
+const MealCard = ({ data }) => {
+  const { name, ico } = data;
+
   return (
     <div className="app__mealCard">
-      <img src={images.Example} alt="Example" />
-      <p>Рагу</p>
+      <img src={ico} alt="Example" />
+      <p>{name}</p>
     </div>
   );
 };

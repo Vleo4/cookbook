@@ -1,0 +1,27 @@
+.app__ingredientCategories {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding-top: 100px;
+  padding-left: 140px;
+  padding-right: 120px;
+}
+
+.app__ingredientCategories-cards {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+@media screen and (max-width: 1480px) {
+  .app__ingredientCategories {
+    padding-left: 40px;
+    padding-right: 20px;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .app__ingredientCategories {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}

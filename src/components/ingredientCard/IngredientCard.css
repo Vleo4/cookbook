@@ -1,18 +1,18 @@
-.app__mealCard {
+.app__ingredientCard {
   display: flex;
   flex-direction: column;
   margin-right: 20px;
   margin-top: 30px;
 }
 
-.app__mealCard img {
+.app__ingredientCard img {
   width: 388px;
   height: 228px;
   border-bottom: 2px solid rgba(255, 199, 0, 0.6);
   border-radius: 25px;
 }
 
-.app__mealCard p {
+.app__ingredientCard p {
   font-family: var(--font-pattaya);
   font-weight: 400;
   font-size: 36px;
@@ -23,14 +23,14 @@
 }
 
 @media screen and (max-width: 1220px) {
-  .app__mealCard {
+  .app__ingredientCard {
     margin-right: 1rem;
   }
-  .app__mealCard img {
+  .app__ingredientCard img {
     width: 288px;
     height: 168px;
   }
-  .app__mealCard p {
+  .app__ingredientCard p {
     font-size: 28px;
     line-height: 42px;
     max-width: 288px;
@@ -38,7 +38,7 @@
 }
 
 @media screen and (max-width: 420px) {
-  .app__mealCard img {
+  .app__ingredientCard img {
     width: 228px;
     height: 138px;
   }

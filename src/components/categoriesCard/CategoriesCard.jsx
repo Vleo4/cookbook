@@ -2,11 +2,12 @@ import React from "react";
 import images from "../../constants/images";
 import "./CategoriesCard.css";
 
-const CategoriesCard = () => {
+const CategoriesCard = ({data}) => {
+  const {name} = data;
   return (
     <div className="app__categoriesCard">
       <img src={images.Example} alt="Example"/>
-      <p>Яловичина</p>
+      <p>{name}</p>
     </div>
   );
 };
