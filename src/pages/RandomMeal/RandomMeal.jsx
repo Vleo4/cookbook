@@ -10,12 +10,12 @@ const ingURL =
   "https://cookbook.brainstormingapplication.com/api/ingridientlist/";
 
 const RandomMeal = () => {
-  const [randomMeal, setRandomMeal] = React.useState([]);
+  const [randomMeal, setRandomMeal] = React.useState(null);
   const [ingredientItems, setIngredientItems] = React.useState([]);
 
   React.useEffect(() => {
     axios.get(randomMealURL).then((response) => {
-      setRandomMeal(response.data);
+      setRandomMeal(response.data[0]);
       console.log(response);
     });
   }, []);

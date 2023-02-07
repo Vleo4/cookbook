@@ -20,6 +20,8 @@ import RandomMeal from "./pages/RandomMeal/RandomMeal";
 import AllIngredients from "./pages/AllIngredients/AllIngredients";
 import Ingredient from "./pages/AllIngredients/Ingredient/Ingredient";
 import IngredientCategories from "./pages/IngredientCategories/IngredientCategories";
+import MCP from "./pages/MealCategoryPosts/MCP";
+import ICP from "./pages/IngCategoryPosts/ICP";
 
 const App = () => {
   return (
@@ -35,11 +37,29 @@ const App = () => {
           <Route path="/meal-categories" exact element={<Categories />} />
           <Route path="/add-recipe" exact element={<CreateMeal />} />
           <Route path="/search-ingredients" exact element={<SearchMeal />} />
-          <Route path="/meals/meal/:id" exact element={<Meal/>} />
-          <Route path="/random-meal" exact element={<RandomMeal/>} />
-          <Route path="/all-ingredients" exact element={<AllIngredients/>} />
-          <Route path="/all-ingredients/ingredient/:id" exact element={<Ingredient/>} />
-          <Route path="/ingredients-categories" exact element={<IngredientCategories/>} />
+          <Route path="/meals/meal/:id" exact element={<Meal />} />
+          <Route path="/random-meal" exact element={<RandomMeal />} />
+          <Route path="/all-ingredients" exact element={<AllIngredients />} />
+          <Route
+            path="/all-ingredients/ingredient/:id"
+            exact
+            element={<Ingredient />}
+          />
+          <Route
+            path="/ingredients-categories"
+            exact
+            element={<IngredientCategories />}
+          />
+          <Route
+            path="/meal-categories/meal-category/:id/:category"
+            exact
+            element={<MCP />}
+          />
+          <Route
+            path="/ingredients-categories/ingredient-category/:id/:category"
+            exact
+            element={<ICP />}
+          />
           <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
       </Router>

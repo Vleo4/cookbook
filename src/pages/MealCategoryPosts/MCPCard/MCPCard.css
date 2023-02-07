@@ -1,0 +1,46 @@
+.app__MCPCard {
+    display: flex;
+    flex-direction: column;
+    margin-right: 20px;
+    margin-top: 30px;
+  }
+  
+  .app__MCPCard img {
+    width: 388px;
+    height: 228px;
+    border-bottom: 2px solid rgba(255, 199, 0, 0.6);
+    border-radius: 25px;
+  }
+  
+  .app__MCPCard p {
+    font-family: var(--font-pattaya);
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 50px;
+    color: #f9f9f9;
+    max-width: 388px;
+    text-align: center;
+  }
+  
+  @media screen and (max-width: 1220px) {
+    .app__MCPCard {
+      margin-right: 1rem;
+    }
+    .app__MCPCard img {
+      width: 288px;
+      height: 168px;
+    }
+    .app__MCPCard p {
+      font-size: 28px;
+      line-height: 42px;
+      max-width: 288px;
+    }
+  }
+  
+  @media screen and (max-width: 420px) {
+    .app__MCPCard img {
+      width: 228px;
+      height: 138px;
+    }
+  }
+  

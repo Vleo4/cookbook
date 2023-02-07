@@ -1,10 +1,10 @@
 import axios from "axios";
 import React from "react";
+import { Link } from "react-router-dom";
 import { CategoriesCard, SubHeading } from "../../components";
 import "./Categories.css";
 
-const baseURL =
-  "https://cookbook.brainstormingapplication.com/api/categorys/";
+const baseURL = "https://cookbook.brainstormingapplication.com/api/categorys/";
 
 const Categories = () => {
   const [post, setPost] = React.useState(null);
@@ -23,7 +23,14 @@ const Categories = () => {
         {post && (
           <>
             {post.map((category) => {
-              return <CategoriesCard key={category.id} data={category} />;
+              return (
+                <Link
+                  to={`/meal-categories/meal-category/${category.id}/${category.name}`}
+                  key={category.id}
+                >
+                  <CategoriesCard data={category} />
+                </Link>
+              );
             })}
           </>
         )}

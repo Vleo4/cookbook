@@ -1,5 +1,6 @@
 import axios from "axios";
 import React from "react";
+import { Link } from "react-router-dom";
 import { SubHeading } from "../../components";
 import CategoriesIngCard from "../../components/categoriesIngCard/CategoriesIngCard";
 import "./IngredientCategories.css";
@@ -25,7 +26,12 @@ const IngredientCategories = () => {
           <>
             {postIngCat.map((categoryIng) => {
               return (
-                <CategoriesIngCard key={categoryIng.id} data={categoryIng} />
+                <Link
+                  to={`/ingredients-categories/ingredient-category/${categoryIng.id}/${categoryIng.name}`}
+                  key={categoryIng.id}
+                >
+                  <CategoriesIngCard data={categoryIng} />
+                </Link>
               );
             })}
           </>

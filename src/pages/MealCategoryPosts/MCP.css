@@ -1,0 +1,27 @@
+.app__MCP {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding-top: 100px;
+  padding-left: 140px;
+  padding-right: 120px;
+}
+
+.app__MCP-cards {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+@media screen and (max-width: 1480px) {
+  .app__MCP {
+    padding-left: 40px;
+    padding-right: 20px;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .app__MCP {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
