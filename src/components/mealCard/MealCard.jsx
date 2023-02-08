@@ -1,6 +1,5 @@
 import React from "react";
 import "./MealCard.css";
-import images from "../../constants/images";
 
 const MealCard = ({ data }) => {
   const { name, ico } = data;

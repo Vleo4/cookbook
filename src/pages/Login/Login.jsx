@@ -1,28 +1,30 @@
 import axios from "axios";
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { SubHeading } from "../../components";
 import "./Login.css";
-import Cookies from 'js-cookie';
 
-const Login = () => {
-  const [login, setLogin] = useState("");
+
+const Login = ({setIsAuth}) => {
+  const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
-
+  const navigate = useNavigate();
   const logPost = async () => {
-    await axios.post(
-      "https://cookbook.brainstormingapplication.com/api/auth/login/",
-      JSON.stringify({ login, password }),
-      {
-        headers: {
-          "Content-Type": "multipart/form-data",
-          "Access-Control-Allow-Origin": "*",
-          'X-CSRFToken': Cookies.get('csrftoken'),
-          'Accept': '*/*',
-        },
-      }
-    );
-    
+    console.log(username,password);
+    await axios
+      .post(
+        "https://cookbook.brainstormingapplication.com/api/token/",
+        { username, password },
+      ).then(response =>{
+        console.log(response);
+        const token = response.data.access;
+        setIsAuth(true);
+
+        localStorage.setItem("token", token);
+
+        navigate("/profile")
+      })
+      .catch(err => console.log(err));
   };
 
   return (
@@ -32,16 +34,16 @@ const Login = () => {
         onSubmit={(e) => {
           e.preventDefault();
           logPost();
-          setLogin("");
+          setUsername("");
           setPassword("");
         }}
       >
         <p style={{ marginTop: "40px" }}>Ім’я користувача/Email:</p>
         <input
           type="text"
-          value={login}
+          value={username}
           onChange={(e) => {
-            setLogin(e.target.value);
+            setUsername(e.target.value);
           }}
         />
         <p style={{ marginTop: "15px" }}>Пароль:</p>
@@ -53,9 +55,13 @@ const Login = () => {
           }}
         />
         <div className="app__login-buttons">
-          <Link to="/profile" className="app__login-buttons_button">
+          <button
+            type="submit"
+            className="app__login-buttons_button"
+            style={{cursor:'pointer'}}
+          >
             Вхід
-          </Link>
+          </button>
 
           <Link to="/signup" className="app__login-buttons_item">
             Не маєте аккаунту?

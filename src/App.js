@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./App.css";
 import {
   BrowserRouter as Router,
@@ -24,14 +24,21 @@ import MCP from "./pages/MealCategoryPosts/MCP";
 import ICP from "./pages/IngCategoryPosts/ICP";
 
 const App = () => {
+  const [isAuth, setIsAuth] = useState(
+    localStorage.getItem("token") ? true : false
+  );
   return (
     <div className="App">
       <Router>
-        <Sidebar />
+        <Sidebar setIsAuth={setIsAuth} />
         <Routes>
           <Route path="/" exact element={<Main />} />
-          <Route path="/profile" exact element={<Profile />} />
-          <Route path="/login" exact element={<Login />} />
+          <Route path="/profile" exact element={<Profile isAuth={isAuth} />} />
+          <Route
+            path="/login"
+            exact
+            element={<Login setIsAuth={setIsAuth} />}
+          />
           <Route path="/signup" exact element={<SignUp />} />
           <Route path="/meals" exact element={<Meals />} />
           <Route path="/meal-categories" exact element={<Categories />} />

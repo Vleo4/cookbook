@@ -25,7 +25,7 @@
   margin-top: 5px;
   background: #353535;
   border: 1px solid rgba(0, 0, 0, 0.2);
-  border-radius: 100px;
+  border-radius: 20px;
   max-width: 380px;
   border-style: none;
   padding: 10px 20px;
@@ -34,9 +34,12 @@
 .app__signup form input[type="text"],
 .app__signup form input[type="password"],
 .app__signup form input[type="email"] {
-  background: transparent;
   border: none;
-  color: white;
+  outline: none;
+  border-radius: 20px;
+  padding-left: 20px;
+  height: 40px;
+  color: black;
   font-size: 16px;
   flex-grow: 1;
   width: 100%;

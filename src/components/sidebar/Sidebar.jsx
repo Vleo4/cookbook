@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { MdOutlineRestaurantMenu } from "react-icons/md";
 
-const Sidebar = () => {
+const Sidebar = ({ setIsAuth }) => {
   const [toggleMenu, setToggleMenu] = React.useState(false);
   return (
     <div className="app__sidebar">
@@ -18,6 +18,16 @@ const Sidebar = () => {
           </Link>
           <Link to="/profile" className="app__sidebar-content_links-item">
             Профіль
+          </Link>
+          <Link
+            to="/login"
+            className="app__sidebar-content_links-item"
+            onClick={() => {
+              localStorage.removeItem("token");
+              setIsAuth(false);
+            }}
+          >
+            Вийти з профілю
           </Link>
           <span></span>
           <Link to="/meals" className="app__sidebar-content_links-item">
