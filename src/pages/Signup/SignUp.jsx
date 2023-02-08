@@ -5,23 +5,22 @@ import { SubHeading } from "../../components";
 import "./SignUp.css";
 
 const SignUp = () => {
-  const [login, setLogin] = useState("");
+  const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [username, setUsername] = useState("");
 
   const logPost = async () => {
-    await axios.post(
-      "https://cookbook.brainstormingapplication.com/api/auth/register/",
-      JSON.stringify({ login, password, username }),
-      {
-       
-      }
-    ).then(res => res.data).then(res => {
-      console.log(res);
-    })
-  
+    await axios
+      .post("https://cookbook.brainstormingapplication.com/api/register/", {
+        username,
+        email,
+        password,
+      })
+      .then((res) => res.data)
+      .then((res) => {
+        console.log(res);
+      });
   };
-
   return (
     <div className="app__signup">
       <SubHeading title="Реєстрація" />
@@ -29,7 +28,7 @@ const SignUp = () => {
         onSubmit={(e) => {
           e.preventDefault();
           logPost();
-          setLogin("");
+          setEmail("");
           setPassword("");
           setUsername("");
         }}
@@ -48,9 +47,9 @@ const SignUp = () => {
 
         <input
           type="email"
-          value={login}
+          value={email}
           onChange={(e) => {
-            setLogin(e.target.value);
+            setEmail(e.target.value);
           }}
         />
 
@@ -65,7 +64,11 @@ const SignUp = () => {
         />
 
         <div className="app__signup-buttons">
-          <button type="submit" className="app__signup-buttons_button" style={{cursor:'pointer'}}>
+          <button
+            type="submit"
+            className="app__signup-buttons_button"
+            style={{ cursor: "pointer" }}
+          >
             Реєстрація
           </button>
           <Link to="/login" className="app__signup-buttons_item">

@@ -1,6 +1,6 @@
 import axios from "axios";
 import React from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { ProfileCard, SubHeading } from "../../components";
 import "./Profile.css";
 
@@ -64,7 +64,11 @@ const Profile = ({ isAuth }) => {
               {userMeal && (
                 <>
                   {userMeal.map((meal) => {
-                    return <ProfileCard data={meal} />;
+                    return (
+                      <Link to={`/meals/meal/${meal.id}`} key={meal.id}>
+                        <ProfileCard data={meal} />
+                      </Link>
+                    );
                   })}
                 </>
               )}

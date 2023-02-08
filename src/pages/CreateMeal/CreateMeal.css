@@ -5,22 +5,11 @@
   width: 100%;
   display: flex;
   flex-direction: column;
+  min-height: 100%;
 }
 
-.app__createMeal-wrapper {
-  display: flex;
-  width: 100%;
-  flex-direction: row;
-  justify-content: flex-start;
-  margin-top: 50px;
-}
-
-.app__createMeal-left {
-  display: flex;
-  margin-right: 55px;
-}
-
-.app__createMeal-left_loadPhoto {
+.app__createMeal_loadPhoto {
+  margin-top: 20px;
   display: flex;
   width: 350px;
   height: 350px;
@@ -33,7 +22,7 @@
   cursor: pointer;
 }
 
-.app__createMeal-left_loadPhoto p {
+.app__createMeal_loadPhoto p {
   font-family: var(--font-swap);
   font-weight: 400;
   font-size: 20px;
@@ -41,28 +30,13 @@
   color: #ffc700;
 }
 
-.app__createMeal-right {
-  display: flex;
-  flex-direction: column;
-  max-width: 590px;
-  width: 100%;
-}
-
-.app__createMeal-right_firstRow {
-  display: flex;
-  justify-content: space-between;
-}
-
-.app__createMeal-right_topRow-leftCol {
+.app__createMeal form {
   display: flex;
   flex-direction: column;
   width: 100%;
 }
 
-.app__createMeal-right_topRow-leftCol p,
-.app__createMeal-right_topRow-rightCol p,
-.app__createMeal-right_secondRow p,
-.app__createMeal-right_thirdRow p {
+.app__createMeal form p {
   font-family: var(--font-swap);
   font-weight: 400;
   font-size: 20px;
@@ -70,216 +44,206 @@
   color: #f3f3f3;
 }
 
-.app__createMeal-right_topRow-leftCol form {
-  background: #353535;
-  border: 1px solid rgba(0, 0, 0, 0.2);
-  border-radius: 100px;
-  max-width: 275px;
-  width: 100%;
-  border-style: none;
-  padding: 10px 20px;
-}
-
-.app__createMeal-right_topRow-leftCol form input[type="text"] {
-  background: transparent;
-  border: none;
-  color: white;
-  font-size: 16px;
-  flex-grow: 1;
-  width: 100%;
-}
-
-.app__createMeal-right_topRow-leftCol form input[type="text"]:focus {
+.app__createMeal form input[type="text"],
+.app__createMeal form input[type="password"] {
   border: none;
   outline: none;
-}
-
-.app__createMeal-right_topRow-rightCol {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  margin-left: 10px;
-}
-
-.app__createMeal-right_topRow-rightCol_checkBox {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  height: 100%;
-  gap: 5px;
-}
-
-.app__createMeal-right_topRow-rightCol_checkBox button {
-  background: #353535;
-  border: 1px solid rgba(0, 0, 0, 0.2);
-  border-radius: 100px;
-  border: none;
-  cursor: pointer;
-  height: 16px;
-  max-width: 82px;
-  width: 100%;
-}
-
-.app__createMeal-right_secondRow {
-  display: flex;
-  flex-direction: column;
-  margin-top: 10px;
-}
-
-.app__createMeal-right_secondRow textarea {
-  background: #353535;
-  border: 1px solid rgba(0, 0, 0, 0.2);
-  border-radius: 25px;
-  max-width: 590px;
-  width: 100%;
-  height: 170px;
-  resize: none;
-  padding: 10px 20px;
+  border-radius: 20px;
+  padding-left: 20px;
+  height: 40px;
   color: #f3f3f3;
   font-size: 16px;
   flex-grow: 1;
+  width: 100%;
+  max-width: 590px;
+  background: #353535;
 }
-
-.app__createMeal-right_secondRow textarea::-webkit-scrollbar {
-  width: 10px;
-  background-color: #181818;
-  border: 1px solid rgba(0, 0, 0, 0.2);
-  border-radius: 100px;
-}
-
-.app__createMeal-right_secondRow textarea::-webkit-scrollbar-thumb {
-  border-radius: 100px;
-  background-color: #353535;
-  border: 1px solid rgba(0, 0, 0, 0.2);
-}
-
-.app__createMeal-right_secondRow textarea:focus {
+.app__createMeal form input[type="text"]:focus,
+.app__createMeal form input[type="password"]:focus {
   border: none;
   outline: none;
 }
 
-.app__createMeal-right_thirdRow {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  margin-top: 10px;
-}
-
-.app__createMeal-right_thirdRow-firstRow,
-.app__createMeal-right_thirdRow-secondRow {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  gap: 5px;
-  align-items: center;
-}
-
-.app__createMeal-right_thirdRow-secondRow {
-  margin-top: 10px;
-}
-
-.app__createMeal-right_thirdRow-firstRow form,
-.app__createMeal-right_thirdRow-secondRow form {
-  background: #353535;
-  border: 1px solid rgba(0, 0, 0, 0.2);
-  border-radius: 100px;
-  width: 100%;
-  border-style: none;
-  padding: 10px 20px;
-  margin-top: 10px;
-}
-
-.app__createMeal-right_thirdRow-firstRow form:nth-child(1),
-.app__createMeal-right_thirdRow-secondRow form:nth-child(1) {
-  max-width: 447px;
-}
-
-.app__createMeal-right_thirdRow-firstRow form:nth-child(2),
-.app__createMeal-right_thirdRow-secondRow form:nth-child(2) {
-  max-width: 93px;
-}
-
-.app__createMeal-right_thirdRow-firstRow form input[type="text"],
-.app__createMeal-right_thirdRow-secondRow form input[type="text"] {
-  background: transparent;
+.app__createMeal form textarea {
   border: none;
-  color: white;
+  outline: none;
+  border-radius: 20px;
+  padding-left: 20px;
+  height: 40px;
+  color: black;
   font-size: 16px;
   flex-grow: 1;
   width: 100%;
+  max-width: 590px;
+  height: 170px;
+  padding: 20px;
+  background: #353535;
+  color: #f3f3f3;
 }
 
-.app__createMeal-right_thirdRow-firstRow form input[type="text"]:focus,
-.app__createMeal-right_thirdRow-secondRow form input[type="text"]:focus {
+.app__createMeal form select {
+  z-index: 10;
   border: none;
   outline: none;
+  border-radius: 20px;
+  padding-left: 20px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  color: black;
+  font-size: 16px;
+  width: 100%;
+  max-width: 590px;
+  background: #353535;
+  color: #f3f3f3;
 }
 
-.app__createMeal-right_thirdRow-firstRow img,
-.app__createMeal-right_thirdRow-secondRow img {
-  width: 16.67px;
-  height: 16.67px;
-  cursor: pointer;
-  margin-top: 5px;
-}
-
-.app__createMeal-right_thirdRow-secondRow img {
-  width: 20.67px;
-  height: 20.67px;
-  cursor: pointer;
-  margin-top: 5px;
-}
-
-.app__createMeal-right_thirdRow-thirdRow {
-  display: flex;
+.app__createMeal form button {
   margin-top: 10px;
 }
 
-.app__createMeal-right_thirdRow-thirdRow button {
-  width: 100%;
-  max-width: 570px;
+.app__createMeal-submit {
   background: #ffc700;
   border: 1px solid rgba(0, 0, 0, 0.2);
   border-radius: 100px;
+  max-width: 545px;
+  width: 100%;
+  margin-top: 20px;
   height: 40px;
+  cursor: pointer;
 
   font-family: var(--font-swap);
   font-weight: 400;
   font-size: 20px;
   line-height: 27px;
   color: #181818;
-  cursor: pointer;
+  text-align: center;
+  margin-bottom: 300px;
 }
 
-.app__createMeal-right_thirdRow-thirdRow button:hover {
+.app__createMeal-submit:hover {
   background: #f3f3f3;
 }
 
-@media screen and (max-width: 1150px) {
-  .app__createMeal-wrapper {
-    flex-direction: column;
-  }
-  .app__createMeal-right {
-    margin-top: 1rem;
-  }
+.app__createMeal-dropdown_dropbtn {
+  display: flex;
+  align-items: center;
+  background: #353535;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 100px;
+  border: none;
+  cursor: pointer;
+  max-width: 545px;
+  width: 100%;
+  height: 40px;
+
+  font-family: var(--font-swap);
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 27px;
+  color: #f3f3f3;
+  text-align: start;
+  padding-left: 20px;
+  padding-right: 20px;
+  justify-content: space-between;
+}
+
+.app__createMeal-dropdown_dropbtn p {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.app__createMeal-dropdown_dropbtn img {
+  margin-left: 10px;
+}
+
+.app__createMeal-dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.app__createMeal-dropdown-content {
+  top: 52px;
+  left: 0;
+  display: none;
+  position: absolute;
+  background: #222222;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 25px 25px;
+  max-width: 545px;
+  width: 100%;
+  z-index: 1;
+  max-height: 285px;
+  overflow-y: scroll;
+}
+
+/* Links inside the dropdown */
+.app__createMeal-dropdown-content p {
+  margin-left: 20px;
+  margin-top: 5px;
+  display: block;
+
+  font-family: var(--font-swap);
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 27px;
+  color: #f3f3f3;
+  cursor: pointer;
+}
+
+/* Change color of dropdown links on hover */
+.app__createMeal-dropdown-content p:hover {
+  color: var(--color-golden);
+}
+
+/* Show the dropdown menu on hover */
+.app__createMeal-dropdown:hover .app__createMeal-dropdown-content {
+  display: block;
+}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.app__createMeal-dropdown:hover .app__createMeal-dropdown_dropbtn {
+  background-color: var(--color-golden);
+}
+
+.app__createMeal-dropdown-content::-webkit-scrollbar {
+  width: 10px;
+  background-color: #181818;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 100px;
+}
+
+.app__createMeal-dropdown-content::-webkit-scrollbar-thumb {
+  border-radius: 100px;
+  background-color: #353535;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+
+@media screen and (max-width: 1480px) {
   .app__createMeal {
     padding-left: 40px;
     padding-right: 20px;
   }
-  .app__createMeal-left {
-    margin-right: 1rem;
+}
+
+@media screen and (max-width: 420px) {
+  .app__createMeal {
+    padding-left: 1rem;
+    padding-right: 1rem;
   }
 }
 
 @media screen and (max-width: 600px) {
-  .app__createMeal-left_loadPhoto {
+  .app__createMeal_loadPhoto {
     width: 250px;
     height: 250px;
   }
 }
 
 @media screen and (max-width: 400px) {
-  .app__createMeal-left_loadPhoto {
+  .app__createMeal_loadPhoto {
     width: 200px;
     height: 200px;
   }

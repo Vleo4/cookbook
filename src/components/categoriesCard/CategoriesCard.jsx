@@ -6,8 +6,9 @@ const CategoriesCard = ({data}) => {
   const {name} = data;
   return (
     <div className="app__categoriesCard">
-      <img src={images.Example} alt="Example"/>
+      <div className="app__categoriesCard-image">
       <p>{name}</p>
+      </div>
     </div>
   );
 };

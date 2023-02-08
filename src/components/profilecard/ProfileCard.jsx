@@ -7,8 +7,8 @@ const ProfileCard = ({data}) => {
   const {name,ico} = data;
   return (
     <div className='app__profileCard'>
-        <p>{name}</p>
         <img src={ico} alt="example" />
+        <p>{name}</p>
     </div>
   )
 }

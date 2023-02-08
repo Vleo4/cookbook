@@ -42,7 +42,7 @@ const App = () => {
           <Route path="/signup" exact element={<SignUp />} />
           <Route path="/meals" exact element={<Meals />} />
           <Route path="/meal-categories" exact element={<Categories />} />
-          <Route path="/add-recipe" exact element={<CreateMeal />} />
+          <Route path="/add-recipe" exact element={<CreateMeal isAuth={isAuth}/>} />
           <Route path="/search-ingredients" exact element={<SearchMeal />} />
           <Route path="/meals/meal/:id" exact element={<Meal />} />
           <Route path="/random-meal" exact element={<RandomMeal />} />
